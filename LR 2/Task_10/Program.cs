@@ -4,8 +4,8 @@ internal class Program
         static void Main()
         {
             Console.Write("Enter array: ");
-            int[] array = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
-            Console.Write("Enter difference: ");
+            int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+        Console.Write("Enter difference: ");
             int difference = int.Parse(Console.ReadLine());
             int count = 0;
             for (int i = 0; i < array.Length - 1; i++)
