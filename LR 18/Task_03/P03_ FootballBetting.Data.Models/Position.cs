@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P03__FootballBetting.Data.Models
+{
+    internal class Position
+    {
+        [Key] 
+        public int PositionId { get; set; }
+        public string Name { get; set; }
+        public ICollection<Player> Players { get; set; } = new List<Player>();
+    }
+}
